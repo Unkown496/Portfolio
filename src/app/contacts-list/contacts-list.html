@@ -1,0 +1,40 @@
+@let listContactsData = contacts;
+
+<ul class="flex flex-col gap-2">
+  @if (listContactsData) {
+    <li class="text-muted">
+      <a [href]="listContactsData.email" class="inline-flex items-baseline gap-1">
+        <fa-icon [icon]="icons.faEnvelope" size="xs" />
+        <span> {{ listContactsData.email }} </span>
+      </a>
+    </li>
+    <li class="text-muted inline-flex items-baseline gap-1">
+      <div>
+        <fa-icon [icon]="icons.faMobile" size="xs" />
+      </div>
+
+      <div>
+        {{ listContactsData.telephone }}
+      </div>
+    </li>
+    <li class="text-muted inline-flex items-baseline gap-1">
+      <div>
+        <fa-icon [icon]="icons.faLocationDot" size="xs" />
+      </div>
+
+      <div>{{ listContactsData.address.city }}, {{ listContactsData.address.country }}</div>
+    </li>
+
+    <ul class="flex gap-2">
+      @for (socialItem of listContactsData.socials; track $index) {
+        <li class="text-muted">
+          <a [href]="socialItem.href">
+            <fa-icon [icon]="['fab', socialItem.icon]" />
+          </a>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p>Загрузка...</p>
+  }
+</ul>

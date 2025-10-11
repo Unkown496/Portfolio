@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #fafafa;
+
+  --color-primary: #fafafa;
+
+  --color-border: #262626;
+
+  --color-muted: #a1a1a1;
+}
+
+html,
+body {
+  @apply h-full min-h-screen w-full min-w-screen;
+}
+
+h3 {
+  @apply text-foreground;
+}

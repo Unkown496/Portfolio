@@ -1,0 +1,16 @@
+{
+  "skills": [{ "title": "Typescript", "name": "ts", "icon": "" }],
+  "paths": [{ "title": "Frontend разработка", "key": "Frontend" }],
+  "contacts": {
+    "email": "croloetor@gmail.com",
+    "telephone": "+7 test-test-test-t",
+    "address": {
+      "city": "Москва",
+      "country": "Россия"
+    },
+    "socials": [
+      { "icon": "telegram", "name": "telegram", "href": "telegram.com" },
+      { "icon": "github", "name": "github", "href": "https://github.com/Unkown496" }
+    ]
+  }
+}

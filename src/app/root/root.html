@@ -1,0 +1,11 @@
+<app-wrapper>
+  <app-header />
+
+  <main [style.marginTop.px]="headerWidth">
+    <div class="mx-auto py-8">
+      <router-outlet />
+    </div>
+  </main>
+
+  <app-footer />
+</app-wrapper>

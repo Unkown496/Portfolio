@@ -1,0 +1,7 @@
+<ul>
+  @for (skill of skills(); track skill.name) {
+    <li class="text-muted">{{ skill.name }}</li>
+  } @empty {
+    <p class="text-primary">Нет навыков</p>
+  }
+</ul>

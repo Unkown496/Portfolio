@@ -1,0 +1,9 @@
+<ul>
+  @for (path of paths(); track $index) {
+    <li class="text-muted">
+      <a routerLink="/projects" [queryParams]="{ filters: [path.key] }">{{ path.title }}</a>
+    </li>
+  } @empty {
+    <p>Нет направлений</p>
+  }
+</ul>
